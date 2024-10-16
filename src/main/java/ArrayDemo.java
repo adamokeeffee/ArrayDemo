@@ -21,11 +21,18 @@ public class ArrayDemo {
         anArrays[8] = 900;
         anArrays[9] = 1000;
 
-        System.out.println("Please enter a new value for anArray[10]");
-        Scanner scan1 = new Scanner(System.in);
-        int num10 = scan1.nextInt();
+        try
+        {
+            System.out.println("Please enter a new value for anArray[10]");
+            Scanner scan1 = new Scanner(System.in);
+            int num10 = scan1.nextInt();
 
-       anArrays[10] = num10;
+            anArrays[10] = num10;
+        }
+        catch(ArrayIndexOutOfBoundsException a)
+        {
+            System.out.println("error " + a.getMessage());
+        }
 
 
 
@@ -39,6 +46,6 @@ public class ArrayDemo {
         System.out.println("Element at index 7:" + anArrays[7]);
         System.out.println("Element at index 8:" + anArrays[8]);
         System.out.println("Element at index 9:" + anArrays[9]);
-        System.out.println("Element at index 10:" + anArrays[10]);
+
     }
 }
